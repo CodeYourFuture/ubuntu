@@ -36,7 +36,7 @@ jobs:
         enabled: true
     working_directory: ~/code
     environment:
-      HEROKU_APP: "ubuntu-app" #ToDo: update for each project
+      HEROKU_APP: "ubuntu-shelter-app" #ToDo: update for each project
     steps:
       - restore_cache:
           keys:
@@ -58,7 +58,7 @@ jobs:
       enabled: true
     working_directory: ~/code
     environment:
-      HEROKU_APP: "ubuntu-server"
+      HEROKU_APP: "ubuntu-shelter-server"
     steps:
       - restore_cache:
           keys:
