@@ -9,7 +9,8 @@ exports.seed = function(knex, Promise) {
           name: "Ubuntu shelter"
         },
         {
-          name: "Edinburgh men shelter"
+          name: "Edinburgh men shelter",
+          city: "Edinburgh"
         }
       ]);
     });
