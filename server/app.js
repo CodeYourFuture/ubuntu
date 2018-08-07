@@ -1,14 +1,28 @@
-const SERVER_PORT = process.env.PORT || 3000;
+const SERVER_PORT = process.env.PORT || 4000;
 const express = require("express");
 const app = express();
+const exphbs = require("express-handlebars");
+const api = require("./api");
+const admin = require("./admin");
+const cors = require("cors");
 
-app.get("/", (req, res) => res.send("Hello world"));
-app.get("/api/status", (req, res) => {
-  res.send({
-    status: OK
-  });
-});
+app.engine(
+  "hbs",
+  exphbs({
+    defaultLayout: "main",
+    extname: "hbs"
+  })
+);
+
+app.set("view engine", "hbs");
+
+app.use(cors());
+
+app.get("/", (req, res) => res.render("home"));
+
+app.use("/admin", admin);
+app.use("/api", api);
 
 app.listen(SERVER_PORT, () =>
-  console.log(`Ubuntu server running on ${SERVER_PORT}`)
+  console.log(`Ubuntu server running on http://localhost:${SERVER_PORT}`)
 );
