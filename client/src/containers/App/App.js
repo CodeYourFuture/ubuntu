@@ -2,11 +2,13 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from "../Home/Home";
 import About from "../About/About";
-import contactUs from "../ContactUs/ContactUs"
+import ContactUs from "../ContactUs/ContactUs";
+import Header from "../../components/Header/Header";
 
 const App = () => (
   <Router>
-    <div>
+    <div className="app">
+      <Header />
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -20,12 +22,11 @@ const App = () => (
       </ul>
       <hr />
 
-      <Router exact path="/" component={Home}/>
-      <Router path="/about" component={About}/>
-      <Router path="/contactUs" component={contactUs}/>
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/contactUs" component={ContactUs} />
     </div>
   </Router>
 );
-
 
 export default App;
