@@ -1,0 +1,19 @@
+{
+  "name": "ubuntu",
+  "version": "1.0.0",
+  "description": "Glasgow Graduation Project - Women Shelter system",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm --prefix server start run dev & npm --prefix client start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodeYourFuture/ubuntu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeYourFuture/ubuntu/issues"
+  },
+  "homepage": "https://github.com/CodeYourFuture/ubuntu#readme"
+}
