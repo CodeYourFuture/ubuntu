@@ -4,6 +4,7 @@ const app = express();
 const exphbs = require("express-handlebars");
 const api = require("./api");
 const admin = require("./admin");
+const cors = require("cors");
 
 app.engine(
   "hbs",
@@ -14,6 +15,8 @@ app.engine(
 );
 
 app.set("view engine", "hbs");
+
+app.use(cors());
 
 app.get("/", (req, res) => res.render("home"));
 
