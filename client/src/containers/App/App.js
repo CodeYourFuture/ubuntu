@@ -1,29 +1,32 @@
-import React, { Component } from "react";
-import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Home from "../Home/Home";
+import About from "../About/About";
+import ContactUs from "../ContactUs/ContactUs";
 import Header from "../../components/Header/Header";
-import * as api from "../../helpers/api";
 
-class App extends Component {
-  state = {
-    status: ""
-  };
+const App = () => (
+  <Router>
+    <div className="app">
+      <Header />
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/contactUs">Contact Us</Link>
+        </li>
+      </ul>
+      <hr />
 
-  componentDidMount() {
-    api.getStatus().then(data => {
-      this.setState({
-        status: JSON.stringify(data)
-      });
-    });
-  }
-  render() {
-    return (
-      <div className="app">
-        <Header />
-        <p className="app-intro">Welcome to Ubuntu Shelter for Women</p>
-        <p>Status: {this.state.status} </p>
-      </div>
-    );
-  }
-}
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/contactUs" component={ContactUs} />
+    </div>
+  </Router>
+);
 
 export default App;
