@@ -4,6 +4,7 @@ import Home from "../Home/Home";
 import About from "../About/About";
 import ContactUs from "../ContactUs/ContactUs";
 import Header from "../../components/Header/Header";
+import Shelters from "../Shelters/Shelters";
 
 const App = () => (
   <Router>
@@ -19,12 +20,16 @@ const App = () => (
         <li>
           <Link to="/contactUs">Contact Us</Link>
         </li>
+        <li>
+          <Link to="/shelters">Shelters</Link>
+        </li>
       </ul>
       <hr />
 
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/contactUs" component={ContactUs} />
+      <Route path="/shelters" component={Shelters} />
     </div>
   </Router>
 );
