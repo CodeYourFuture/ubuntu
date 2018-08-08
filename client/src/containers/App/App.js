@@ -5,6 +5,8 @@ import About from "../About/About";
 import ContactUs from "../ContactUs/ContactUs";
 import Header from "../../components/Header/Header";
 import Shelters from "../Shelters/Shelters";
+import Referrals from "../Referrals/Referrals";
+
 
 const App = () => (
   <Router>
@@ -23,6 +25,9 @@ const App = () => (
         <li>
           <Link to="/shelters">Shelters</Link>
         </li>
+        <li>
+          <Link to="/referrals">Referrals</Link>
+        </li>
       </ul>
       <hr />
 
@@ -30,6 +35,8 @@ const App = () => (
       <Route path="/about" component={About} />
       <Route path="/contactUs" component={ContactUs} />
       <Route path="/shelters" component={Shelters} />
+      <Route path="/referrals" component={Referrals} />
+
     </div>
   </Router>
 );

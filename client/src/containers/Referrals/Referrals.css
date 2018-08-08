@@ -1,0 +1,14 @@
+.shelters-container {
+  display: flex;
+}
+.shelter-info {
+  border: 1px solid green;
+  margin: 10px;
+  padding: 5px;
+  width: 30%;
+}
+
+.shelter-info h3 {
+  color: #213321;
+  font-size: 16px;
+}
