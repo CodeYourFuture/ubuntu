@@ -9,7 +9,8 @@ exports.seed = function(knex, Promise) {
           name: "Ubuntu referral"
         },
         {
-          name: "Edinburgh men referral"
+          name: "Edinburgh men referral",
+          city: "Edinburgh"
         }
       ]);
     });
