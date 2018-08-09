@@ -5,10 +5,10 @@ exports.seed = function(knex, Promise) {
     .then(function() {
       // Inserts seed entries
       return knex("addresses").insert([
-        { id: 1, House_number: "44" },
-        { id: 2, Street_name: "Baronald Drive" },
-        { id: 3, City: "Glasgow" },
-        { id: 4, Postcode: "G12 OHW" }
+        { House_number: "44" },
+        { Street_name: "Baronald Drive" },
+        { City: "Glasgow" },
+        { Postcode: "G12 OHW" }
       ]);
     });
 };
