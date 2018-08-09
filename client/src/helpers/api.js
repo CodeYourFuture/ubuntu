@@ -7,3 +7,7 @@ export const getStatus = () => {
 export const getShelters = () => {
   return fetch(`${API_URL}/api/shelters`).then(res => res.json());
 };
+
+export const getAddresses = () => {
+  return fetch(`${API_URL}/api/address`).then(res => res.json());
+};
