@@ -4,6 +4,7 @@ import Home from "../Home/Home";
 import About from "../About/About";
 import ContactUs from "../ContactUs/ContactUs";
 import Header from "../../components/Header/Header";
+import Addresses from "../Addresses/Addresses";
 import Shelters from "../Shelters/Shelters";
 
 const App = () => (
@@ -23,6 +24,9 @@ const App = () => (
         <li>
           <Link to="/shelters">Shelters</Link>
         </li>
+        <li>
+          <Link to="/addresses">Addresses</Link>
+        </li>
       </ul>
       <hr />
 
@@ -30,6 +34,7 @@ const App = () => (
       <Route path="/about" component={About} />
       <Route path="/contactUs" component={ContactUs} />
       <Route path="/shelters" component={Shelters} />
+      <Route path="/addresses" component={Addresses} />
     </div>
   </Router>
 );
