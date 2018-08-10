@@ -23,6 +23,9 @@ const App = () => (
         <li>
           <Link to="/shelters">Shelters</Link>
         </li>
+        <li>
+          <Link to="/organisations">organisations</Link>
+        </li>
       </ul>
       <hr />
 

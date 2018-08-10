@@ -16,4 +16,11 @@ router.get("/status", (req, res) => {
   });
 });
 
+// GET /organisations
+router.get("/organisations", (req, res) => {
+  db.getOrganisations().then(data => {
+    res.send(data);
+  });
+});
+
 module.exports = router;
