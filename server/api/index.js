@@ -16,4 +16,11 @@ router.get("/status", (req, res) => {
   });
 });
 
+//GET /addresses
+router.get("/addresses", (req, res) => {
+  db.getAddresses().then(data => {
+    res.send(data);
+  });
+});
+
 module.exports = router;
