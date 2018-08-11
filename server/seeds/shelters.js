@@ -10,7 +10,7 @@ exports.seed = function(knex, Promise) {
         },
         {
           name: "Edinburgh men shelter",
-          city: "Edinburgh"
+          address: "Edinburgh"
         }
       ]);
     });
