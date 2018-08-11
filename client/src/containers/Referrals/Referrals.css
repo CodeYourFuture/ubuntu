@@ -1,0 +1,14 @@
+.referrals-container {
+  display: flex;
+}
+.referral-info {
+  border: 1px solid green;
+  margin: 10px;
+  padding: 5px;
+  width: 30%;
+}
+
+.referral-info h3 {
+  color: #213321;
+  font-size: 16px;
+}
