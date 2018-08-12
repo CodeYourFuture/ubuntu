@@ -15,8 +15,8 @@ class Addresses extends Component {
   render() {
     return (
       <div>
-        <h1>Addresses</h1>
-        <div class="addresses_list">
+        <h1>List of Addresses</h1>
+        <div className="addresses_list">
           {this.state.addresses.map(address => {
             return (
               <div className="addresses">

@@ -17,7 +17,7 @@ class Shelters extends Component {
     return (
       <div>
         <h1>List of shelters</h1>
-        <div class="shelters-container">
+        <div className="shelters-container">
           {this.state.shelters.map(shelter => {
             return (
               <div className="shelter-info">
