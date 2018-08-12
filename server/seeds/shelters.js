@@ -6,11 +6,19 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex("shelters").insert([
         {
-          name: "Ubuntu shelter"
+          name: "anniesland shelter",
+          address: "anniesland",
+          detail: "2 bedrooms"
         },
         {
           name: "Edinburgh men shelter",
-          city: "Edinburgh"
+          address: "Edinburgh",
+          detail: "3 bedrooms"
+        },
+        {
+          name: "nice wood shelter",
+          address: "nice wood",
+          detail: "1 bedroom"
         }
       ]);
     });
