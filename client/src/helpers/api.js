@@ -9,5 +9,5 @@ export const getShelters = () => {
 };
 
 export const getAddresses = () => {
-  return fetch("${API_URL}/api/addresses").then(res => res.json());
+  return fetch(`${API_URL}/api/addresses`).then(res => res.json());
 };
