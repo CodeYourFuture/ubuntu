@@ -11,7 +11,6 @@ class Addresses extends Component {
         addresses: data
       });
     });
-    console.log(data);
   }
   render() {
     return (
