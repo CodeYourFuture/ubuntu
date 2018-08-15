@@ -22,6 +22,12 @@ router.get("/status", (req, res) => {
   });
 });
 
+//GET /addresses
+router.get("/addresses", (req, res) => {
+  db.getAddresses().then(data => {
+    res.send(data);
+  });
+});
 // GET /users
 router.get("/users", (req, res) => {
   db.getUsers().then(data => {

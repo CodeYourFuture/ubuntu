@@ -8,6 +8,9 @@ export const getShelters = () => {
   return fetch(`${API_URL}/api/shelters`).then(res => res.json());
 };
 
+export const getAddresses = () => {
+  return fetch(`${API_URL}/api/addresses`).then(res => res.json());
+};
 export const getReferrals = () => {
   return fetch(`${API_URL}/api/referrals`).then(res => res.json());
 };
