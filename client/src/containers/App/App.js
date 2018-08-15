@@ -33,7 +33,7 @@ const App = () => (
           <Link to="/users">Users</Link>
         </li>
         <li>
-        <Link to="/addresses">Addresses</Link>
+          <Link to="/addresses">Addresses</Link>
         </li>
       </ul>
       <hr />
