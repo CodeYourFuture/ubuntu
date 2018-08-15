@@ -148,10 +148,10 @@ CREATE USER cyf WITH PASSWORD 'password';
 ```
 
 ```sql
-CREATE DATABASE ediesia OWNER cyf;
+CREATE DATABASE ubuntu OWNER cyf;
 ```
 
-Command for getting into ediesia database `psql -U cyf ubuntu`
+Command for getting into ubuntu database `psql -U cyf ubuntu`
 
 ## Migrations
 
@@ -161,4 +161,3 @@ We use `knex` for migrations, but we created alias helpers on `package.json` to 
 
 1.  Create a migration `npm run create-migration table_name`
 2.  Create a seed `npm run create-seed table_name`
-3.  To
