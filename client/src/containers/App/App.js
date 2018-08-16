@@ -4,7 +4,10 @@ import Home from "../Home/Home";
 import About from "../About/About";
 import ContactUs from "../ContactUs/ContactUs";
 import Header from "../../components/Header/Header";
+import Addresses from "../Addresses/Addresses";
 import Shelters from "../Shelters/Shelters";
+import Referrals from "../Referrals/Referrals";
+import Users from "../Users/Users";
 
 const App = () => (
   <Router>
@@ -25,6 +28,14 @@ const App = () => (
         </li>
         <li>
           <Link to="/organisations">organisations</Link>
+
+          <Link to="/referrals">Referrals</Link>
+        </li>
+        <li>
+          <Link to="/users">Users</Link>
+        </li>
+        <li>
+          <Link to="/addresses">Addresses</Link>
         </li>
       </ul>
       <hr />
@@ -33,6 +44,9 @@ const App = () => (
       <Route path="/about" component={About} />
       <Route path="/contactUs" component={ContactUs} />
       <Route path="/shelters" component={Shelters} />
+      <Route path="/referrals" component={Referrals} />
+      <Route path="/addresses" component={Addresses} />
+      <Route path="/users" component={Users} />
     </div>
   </Router>
 );

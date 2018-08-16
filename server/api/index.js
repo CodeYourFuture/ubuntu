@@ -9,6 +9,12 @@ router.get("/shelters", (req, res) => {
   });
 });
 
+router.get("/referrals", (req, res) => {
+  db.getReferrals().then(data => {
+    res.send(data);
+  });
+});
+
 // GET /status
 router.get("/status", (req, res) => {
   db.getStatus().then(data => {
@@ -19,6 +25,18 @@ router.get("/status", (req, res) => {
 // GET /organisations
 router.get("/organisations", (req, res) => {
   db.getOrganisations().then(data => {
+    res.send(data);
+  });
+});
+//GET /addresses
+router.get("/addresses", (req, res) => {
+  db.getAddresses().then(data => {
+    res.send(data);
+  });
+});
+// GET /users
+router.get("/users", (req, res) => {
+  db.getUsers().then(data => {
     res.send(data);
   });
 });

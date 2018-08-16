@@ -11,3 +11,20 @@ export const getShelters = () => {
 export const getOrganisations = () => {
   return fetch(`${API_URL}/api/organisations`).then(res => res.json());
 };
+
+export const getAddresses = () => {
+  return fetch(`${API_URL}/api/addresses`).then(res => res.json());
+};
+export const getReferrals = () => {
+  return fetch(`${API_URL}/api/referrals`).then(res => res.json());
+};
+
+export const getAddresses = () => {
+  return fetch(`${API_URL}/api/address`).then(res => res.json());
+};
+
+export const getUsers = () => {
+  return fetch(`${API_URL}/api/users`).then(res => res.json());
+};
+
+

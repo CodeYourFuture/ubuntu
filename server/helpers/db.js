@@ -14,8 +14,23 @@ const getOrganisations = () => {
   return knex.select().from("organisations");
 };
 
+const getAddresses = () => {
+  return knex.select().from("addresses");
+};
+const getReferrals = () => {
+  return knex.select().from("referrals");
+};
+
+const getUsers = () => {
+  return knex.select().from("users");
+};
+
 module.exports = {
   getStatus: getStatus,
   getShelters: getShelters,
-  getOrganisations: getOrganisations
+  getOrganisations: getOrganisations,
+  getAddresses: getAddresses,
+  getShelters: getShelters,
+  getReferrals: getReferrals,
+  getUsers: getUsers
 };
