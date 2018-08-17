@@ -46,7 +46,7 @@ jobs:
           command: bash .circleci/deploy-app-to-heroku.sh
       - run:
           name: "Push to Heroku"
-          command: 
+          command: |
             heroku git:remote -a $HEROKU_APP
             git config --global user.name "CYF"
             git push heroku `git subtree split --prefix client master`:refs/heads/master --force
@@ -68,7 +68,7 @@ jobs:
           command: bash .circleci/deploy-app-to-heroku.sh
       - run:
           name: "Push to Heroku"
-          command: 
+          command: |
             heroku git:remote -a $HEROKU_APP
             git config --global user.name "CYF"
             git push heroku `git subtree split --prefix server master`:refs/heads/master --force
