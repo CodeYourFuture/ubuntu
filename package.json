@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm --prefix server start run dev & npm --prefix client start",
-    "install": "npm --prefix server start install & npm --prefix client install"
+    "install": "npm --prefix server install & npm --prefix client install"
   },
   "repository": {
     "type": "git",
