@@ -35,4 +35,10 @@ router.get("/users", (req, res) => {
   });
 });
 
+router.get("/register_organisations", (req, res) => {
+  db.getRegister_Organisations().then(data => {
+    res.send(data);
+  });
+});
+
 module.exports = router;

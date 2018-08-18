@@ -21,10 +21,15 @@ const getUsers = () => {
   return knex.select().from("users");
 };
 
+const getRegister_Organisations = () => {
+  return knex.select().from("register_organistions");
+};
+
 module.exports = {
   getStatus: getStatus,
   getAddresses: getAddresses,
   getShelters: getShelters,
   getReferrals: getReferrals,
-  getUsers: getUsers
+  getUsers: getUsers,
+  getRegister_Organisations: getRegister_Organisations
 };

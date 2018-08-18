@@ -8,6 +8,7 @@ import Addresses from "../Addresses/Addresses";
 import Shelters from "../Shelters/Shelters";
 import Referrals from "../Referrals/Referrals";
 import Users from "../Users/Users";
+import RegisterOrganistions from "../RegisterOrganisations/RegisterOrganisations";
 
 const App = () => (
   <Router>
@@ -33,7 +34,7 @@ const App = () => (
           <Link to="/users">Users</Link>
         </li>
         <li>
-        <Link to="/addresses">Addresses</Link>
+          <Link to="/addresses">Addresses</Link>
         </li>
       </ul>
       <hr />
@@ -45,6 +46,7 @@ const App = () => (
       <Route path="/referrals" component={Referrals} />
       <Route path="/addresses" component={Addresses} />
       <Route path="/users" component={Users} />
+      <Route path="/registerOrganisations" component={RegisterOrganistions} />
     </div>
   </Router>
 );
