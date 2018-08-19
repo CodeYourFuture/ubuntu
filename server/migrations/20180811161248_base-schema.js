@@ -3,7 +3,7 @@ exports.up = async (knex, Promise) => {
     table.increments("shelter_id");
     table.string("name");
     table.string("address");
-    table.string("detail");
+    table.string("details");
   });
   await knex.schema.createTable("referrals", table => {
     table.increments("referral_id");
@@ -41,4 +41,9 @@ exports.up = async (knex, Promise) => {
   });
 };
 
-exports.down = function(knex, Promise) {};
+exports.down = async (knex, Promise) => {
+  await knex.schema.dropTable("shelters_staff");
+  await knex.schema.dropTable("staff");
+  await knex.schema.dropTable("referrals");
+  await knex.schema.dropTable("shelters");
+};
