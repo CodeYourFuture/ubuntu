@@ -21,10 +21,24 @@ const getUsers = () => {
   return knex.select().from("users");
 };
 
+const getSingleUser = (email, password) => {
+  return knex("users")
+    .where({ email, password })
+    .first();
+};
+const getUserProfile = userId => {
+  return knex("users")
+    .select("user_id", "email", "name")
+    .where({ user_id: userId })
+    .first();
+};
+
 module.exports = {
   getStatus: getStatus,
   getAddresses: getAddresses,
   getShelters: getShelters,
   getReferrals: getReferrals,
-  getUsers: getUsers
+  getUsers: getUsers,
+  getSingleUser,
+  getUserProfile
 };
