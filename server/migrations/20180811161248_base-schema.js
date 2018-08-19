@@ -5,6 +5,9 @@ exports.up = async (knex, Promise) => {
     table.string("address");
     table.string("details");
   });
+  await knex.schema.createTable("users", table => {
+    table.increments("users_id");
+  });
   await knex.schema.createTable("referrals", table => {
     table.increments("referral_id");
     table.string("name");
