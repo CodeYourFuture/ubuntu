@@ -25,6 +25,14 @@ exports.seed = async (knex, Promise) => {
   await knex("referrals").insert([
     { name: "Mozafar", shelter_id: edinburghShelterId },
     { name: "Mimi", shelter_id: ubuntuShelterId },
-    { name: "Etza", shelter_id: ubuntuShelterId },
+    { name: "Etza", shelter_id: ubuntuShelterId }
+  ]);
+
+  await knex("users").insert([
+    {
+      name: "yohannes",
+      email: "email",
+      password: "password"
+    }
   ]);
 };
