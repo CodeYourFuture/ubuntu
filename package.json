@@ -16,7 +16,7 @@
     "url": "https://github.com/CodeYourFuture/ubuntu.git"
   },
   "cacheDirectories": [
-    "node_modules",
+    "server/node_modules",
     "client/node_modules"
   ],
   "author": "",
