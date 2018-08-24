@@ -22,4 +22,10 @@ router.get("/users", (req, res) => {
   });
 });
 
+router.get("/organisationsRegister", (req, res) => {
+  db.getOrganisationsRegister().then(data => {
+    res.send(data);
+  });
+});
+
 module.exports = router;
