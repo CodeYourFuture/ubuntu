@@ -34,7 +34,7 @@ const App = () => (
           <Link to="/users">Users</Link>
         </li>
         <li>
-          <Link to="/VolunteersForm">Volunteers form</Link>
+          <Link to="/Volunteers">Volunteers</Link>
         </li>
       </ul>
       <hr />
@@ -45,7 +45,7 @@ const App = () => (
       <Route path="/shelters" component={Shelters} />
       <Route path="/referrals" component={Referrals} />
       <Route path="/users" component={Users} />
-      <Route path="/VolunteersForm" component={VolunteersForm} />
+      <Route path="/Volunteers" component={VolunteersForm} />
     </div>
   </Router>
 );
