@@ -1,11 +1,10 @@
 import React from "react";
 import * as api from "../../helpers/api";
-import "./OrganisationsRegister.css";
 
-class RegisterOrganisation extends React.Component {
+class OrganisationsRegister extends React.Component {
   state = {
     contactName: "",
-    organisationName: "",
+    organisationName: " ",
     address: "",
     email: "",
     phoneNumber: "",
@@ -19,7 +18,7 @@ class RegisterOrganisation extends React.Component {
     return (
       <div className="register_form">
         <h1 className="heading">Register your organisation</h1>
-        <form className="register_organisations">
+        <form className="organisation-details">
           <label contact name>
             <input
               placeholder="Contact name"
@@ -79,4 +78,4 @@ class RegisterOrganisation extends React.Component {
     );
   }
 }
-export default RegisterOrganisation;
+export default OrganisationsRegister;
