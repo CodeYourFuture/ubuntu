@@ -7,6 +7,7 @@ import Header from "../../components/Header/Header";
 import Shelters from "../Shelters/Shelters";
 import Referrals from "../Referrals/Referrals";
 import Users from "../Users/Users";
+import OrganisationsRegister from "../OrganisationsRegister/OrganisationsRegister";
 
 const App = () => (
   <Router>
@@ -31,6 +32,9 @@ const App = () => (
         <li>
           <Link to="/users">Users</Link>
         </li>
+        <li>
+          <Link to="/organisations_register">Register your organisation</Link>
+        </li>
       </ul>
       <hr />
 
@@ -40,6 +44,7 @@ const App = () => (
       <Route path="/shelters" component={Shelters} />
       <Route path="/referrals" component={Referrals} />
       <Route path="/users" component={Users} />
+      <Route path="/organisations_register" component={OrganisationsRegister} />
     </div>
   </Router>
 );
