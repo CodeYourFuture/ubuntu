@@ -11,9 +11,9 @@ exports.seed = function(knex, Promise) {
           logo_url:"",
           phone_number:"1231456",
           office_address:"G1 0LP",
-          who_we_are:"",
+          who_we_are:"cyf",
           what_we_do:"",
-          supports:""
+          supports:"we support womens"
         },
         
       ]);

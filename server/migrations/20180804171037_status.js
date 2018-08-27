@@ -9,7 +9,7 @@ exports.up = function(knex, Promise) {
       table.string("office_address");
       table.string("who_we_are");
       table.string("what_we_do");
-      table.string("supports");
+      table.string(" supports");
     })
     
   );
