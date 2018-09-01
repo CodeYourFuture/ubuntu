@@ -12,6 +12,14 @@ export const getReferrals = () => {
   return instance.get("/api/referrals").then(res => res.data);
 };
 
+export const getOrganisations = () => {
+  return fetch(`${API_URL}/api/organisations`).then(res => res.json());
+};
+
+export const getAddresses = () => {
+  return fetch(`${API_URL}/api/addresses`).then(res => res.json());
+}
+
 export const getUsers = () => {
   return instance.get("/api/users").then(res => res.data);
 };
@@ -23,6 +31,11 @@ export const getUserProfile = () => {
 export const saveOrganisation = organisationData => {
   return instance.post("api/organisations", organisationData);
 };
+
+export const getShelterAbout = () => {
+  return instance.get("/api/shelter/about").then(res => res.data);
+};
+
 export const loginUser = async (email, password) => {
   const { data } = await instance.post("/auth/login", { email, password });
 
@@ -31,3 +44,4 @@ export const loginUser = async (email, password) => {
 
   return data.token;
 };
+
