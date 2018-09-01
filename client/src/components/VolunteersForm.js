@@ -8,8 +8,8 @@ state={
     email:"",
     phoneNumber:"",
     yourExperience:"",
-    address:"",
-    yourExperience:""
+
+
 
 };
 onSubmit=e=>{
@@ -38,17 +38,13 @@ render(){
             value={this.state.phoneNumber}
            onChange={e=> this.setState({phoneNumber: e.target.value})}
             />
-            <br/>
-            <input placeholder="address" 
-            value={this.state.password}
-           onChange={e=> this.setState({password: e.target.value})}
-            />
+            
             <br/>
 
             <textarea rows="4" cols= "22"
             placeholder="your experience"
-            value={this.state.subject}
-           onChange={e=> this.setState({address: e.target.value})}
+            value={this.state.yourExperience}
+           onChange={e=> this.setState({yourExperience: e.target.value})}
            />
             
             
