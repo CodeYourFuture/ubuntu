@@ -42,4 +42,17 @@ router.get("/users", (req, res) => {
   });
 });
 
+router.post("/organisations", (req, res) => {
+  const body = req.body;
+  const organisation = {
+    contact_name: body.contactName,
+    organisation_name: body.organisationName,
+    email: body.email,
+    address: body.address
+  };
+  db.saveOrganisation(organisation).then(data => {
+    res.send(data);
+  });
+});
+
 module.exports = router;

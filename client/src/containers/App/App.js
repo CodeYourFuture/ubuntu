@@ -7,6 +7,7 @@ import Header from "../../components/Header/Header";
 import Shelters from "../Shelters/Shelters";
 import Referrals from "../Referrals/Referrals";
 import Users from "../Users/Users";
+import OrganisationsRegister from "../OrganisationsRegister/OrganisationsRegister";
 import VolunteersForm from "../../components/VolunteersForm";
 
 import axios from "axios";
@@ -75,6 +76,8 @@ class App extends Component {
           <Route path="/referrals" component={Referrals} />
           <Route path="/users" component={Users} />
             <Route path="/Volunteers" component={VolunteersForm} />
+              
+      <Route path="/organisations_register" component={OrganisationsRegister} />
               <Route path="/who-we-are" component={About} />
       <Route path="/what-we-do" component={About} />
       <Route path="/who-we-support" component={About} />

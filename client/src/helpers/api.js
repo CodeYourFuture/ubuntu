@@ -28,6 +28,10 @@ export const getUserProfile = () => {
   return instance.get("/user/profile");
 };
 
+export const saveOrganisation = organisationData => {
+  return instance.post("api/organisations", organisationData);
+};
+
 export const getShelterAbout = () => {
   return instance.get("/api/shelter/about").then(res => res.data);
 };
