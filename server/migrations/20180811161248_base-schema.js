@@ -3,7 +3,7 @@ exports.up = async (knex, Promise) => {
     table.increments("shelter_id");
     table.string("name");
     table.string("address");
-    table.string("detail");
+    table.string("details");
   });
   await knex.schema.createTable("referrals", table => {
     table.increments("referral_id");
@@ -39,6 +39,18 @@ exports.up = async (knex, Promise) => {
       .references("staff_id")
       .inTable("staff");
   });
+  await knex.schema.createTable("users", table => {
+    table.increments("user_id");
+    table.string("name");
+    table.string("email");
+    table.string("password");
+  });
 };
 
-exports.down = function(knex, Promise) {};
+exports.down = async (knex, Promise) => {
+  await knex.schema.dropTableIfExists("shelters_staff");
+  await knex.schema.dropTableIfExists("staff");
+  await knex.schema.dropTableIfExists("referrals");
+  await knex.schema.dropTableIfExists("shelters");
+  await knex.schema.dropTableIfExists("users");
+};

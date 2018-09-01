@@ -34,6 +34,7 @@ router.get("/addresses", (req, res) => {
     res.send(data);
   });
 });
+
 // GET /users
 router.get("/users", (req, res) => {
   db.getUsers().then(data => {
