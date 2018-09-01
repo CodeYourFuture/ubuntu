@@ -12,6 +12,14 @@ export const getReferrals = () => {
   return instance.get("/api/referrals").then(res => res.data);
 };
 
+export const getOrganisations = () => {
+  return fetch(`${API_URL}/api/organisations`).then(res => res.json());
+};
+
+export const getAddresses = () => {
+  return fetch(`${API_URL}/api/addresses`).then(res => res.json());
+}
+
 export const getUsers = () => {
   return instance.get("/api/users").then(res => res.data);
 };
