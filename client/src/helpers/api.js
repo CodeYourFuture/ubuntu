@@ -18,7 +18,7 @@ export const getOrganisations = () => {
 
 export const getAddresses = () => {
   return fetch(`${API_URL}/api/addresses`).then(res => res.json());
-}
+};
 
 export const getUsers = () => {
   return instance.get("/api/users").then(res => res.data);
@@ -28,8 +28,8 @@ export const getUserProfile = () => {
   return instance.get("/user/profile");
 };
 
-export const saveOrganisation = organisationData => {
-  return instance.post("api/organisations", organisationData);
+export const saveUser = userData => {
+  return instance.post("api/users", userData);
 };
 
 export const getShelterAbout = () => {
@@ -44,4 +44,3 @@ export const loginUser = async (email, password) => {
 
   return data.token;
 };
-

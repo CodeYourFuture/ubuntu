@@ -27,7 +27,7 @@ class Login extends Component {
     try {
       await loginUser(email, password);
 
-      this.props.history.push("/");
+      window.location = "/";
     } catch (err) {
       this.setState({ message: "error happened" });
     }
@@ -76,7 +76,7 @@ class Login extends Component {
           </button>
           <p>
             Not a member?{" "}
-            <Link to="/register">
+            <Link to="/organisations-register">
               <span
                 className="glyphicon glyphicon-plus-sign"
                 aria-hidden="true"
