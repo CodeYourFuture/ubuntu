@@ -15,13 +15,6 @@ router.get("/referrals", (req, res) => {
   });
 });
 
-// GET /status
-router.get("/status", (req, res) => {
-  db.getStatus().then(data => {
-    res.send(data);
-  });
-});
-
 // GET /users
 router.get("/users", (req, res) => {
   db.getUsers().then(data => {

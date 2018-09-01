@@ -8,8 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 0",
     "dev": "nodemon app.js",
     "migrate": "knex migrate:latest && knex seed:run",
-    "create-migration": "knex migrate:make $1",
-    "create-seed": "knex seed:make $1"
+    "knex": "knex",
+    "rollback": "knex migrate:rollback",
+    "recreate-db": "npm run rollback && npm run migrate",
+    "circle-ci-recreate-db": "npm run rollback && npm run migrate"
   },
   "author": "",
   "license": "ISC",
@@ -18,9 +20,12 @@
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+    "jsonwebtoken": "^8.3.0",
     "knex": "^0.15.2",
-    "pg": "^7.4.3",
-    "sqlite3": "^4.0.2"
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.4.3"
   },
   "devDependencies": {
     "nodemon": "^1.18.3"
