@@ -45,16 +45,16 @@ exports.up = async (knex, Promise) => {
     table.string("email");
     table.string("password");
   });
-};
 
-await knex.schema.createTable("register_organisations", tabe => {
-  table.increments("organisation_id");
-  table.string("organisation_name");
-  table.string("contact_name");
-  table.string("address");
-  table.string("email");
-  table.string("phone_number");
-});
+  await knex.schema.createTable("organisations", table => {
+    table.increments("organisation_id");
+    table.string("organisation_name");
+    table.string("contact_name");
+    table.string("address");
+    table.string("email");
+    table.string("phone_number");
+  });
+};
 
 exports.down = async (knex, Promise) => {
   await knex.schema.dropTableIfExists("shelters_staff");
@@ -62,5 +62,5 @@ exports.down = async (knex, Promise) => {
   await knex.schema.dropTableIfExists("referrals");
   await knex.schema.dropTableIfExists("shelters");
   await knex.schema.dropTableIfExists("users");
-  await knex.schema.dropTableIfExists("register_organisations");
+  await knex.schema.dropTableIfExists("organisations");
 };

@@ -4,7 +4,7 @@ import * as api from "../../helpers/api";
 class OrganisationsRegister extends React.Component {
   state = {
     contactName: "",
-    organisationName: " ",
+    organisationName: "",
     address: "",
     email: "",
     phoneNumber: "",
@@ -13,29 +13,30 @@ class OrganisationsRegister extends React.Component {
 
   onSubmit = e => {
     e.preventDefault();
+    api.saveOrganisation(this.state);
   };
   render() {
     return (
       <div className="register_form">
         <h1 className="heading">Register your organisation</h1>
         <form className="organisation-details">
-          <label contact name>
-            <input
-              placeholder="Contact name"
-              value={this.state.contactName}
-              onChange={e => this.setState({ contactName: e.target.value })}
-            />
-          </label>
+          <label for="contactName">Name</label>
+          <input
+            name="contactName"
+            placeholder="Contact name"
+            value={this.state.contactName}
+            onChange={e => this.setState({ contactName: e.target.value })}
+          />
+
           <br />
-          <label organisation name>
-            <input
-              placeholder="Organisation name"
-              value={this.state.organisationName}
-              onChange={e =>
-                this.setState({ organisationName: e.target.value })
-              }
-            />
-          </label>
+          <label for="organisationName">Organisation name</label>
+          <input
+            name="organisationName"
+            placeholder="Organisation name"
+            value={this.state.organisationName}
+            onChange={e => this.setState({ organisationName: e.target.value })}
+          />
+
           <br />
           <label address>
             <input

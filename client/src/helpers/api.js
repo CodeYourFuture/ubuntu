@@ -20,10 +20,9 @@ export const getUserProfile = () => {
   return instance.get("/user/profile");
 };
 
-export const getOrganisationsRegister = () => {
-  return instance.get("/api/organisationsRegister");
+export const saveOrganisation = organisationData => {
+  return instance.post("api/organisations", organisationData);
 };
-
 export const loginUser = async (email, password) => {
   const { data } = await instance.post("/auth/login", { email, password });
 
