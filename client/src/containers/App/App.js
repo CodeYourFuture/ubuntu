@@ -7,6 +7,8 @@ import Header from "../../components/Header/Header";
 import Shelters from "../Shelters/Shelters";
 import Referrals from "../Referrals/Referrals";
 import Users from "../Users/Users";
+import VolunteersForm from "../../components/VolunteersForm";
+
 import axios from "axios";
 
 class App extends Component {
@@ -53,6 +55,9 @@ class App extends Component {
             <li>
               <Link to="/users">Users</Link>
             </li>
+      <li>
+          <Link to="/Volunteers">Volunteers</Link>
+        </li>
             <li>
               {localStorage.getItem("jwtToken") && (
                 <button className="btn btn-primary" onClick={this.logout}>
@@ -69,6 +74,7 @@ class App extends Component {
           <Route path="/shelters" component={Shelters} />
           <Route path="/referrals" component={Referrals} />
           <Route path="/users" component={Users} />
+            <Route path="/Volunteers" component={VolunteersForm} />
         </div>
       </Router>
     );
