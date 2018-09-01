@@ -9,7 +9,7 @@ import Referrals from "../Referrals/Referrals";
 import Users from "../Users/Users";
 import OrganisationsRegister from "../OrganisationsRegister/OrganisationsRegister";
 import VolunteersForm from "../../components/VolunteersForm";
-
+import Login from "../../components/Login/Login";
 import axios from "axios";
 
 class App extends Component {
@@ -20,9 +20,9 @@ class App extends Component {
     const token = localStorage.getItem("jwtToken");
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-    if (!token) {
-      return this.props.history.push("/login");
-    }
+    // if (!token) {
+    //   return this.props.history.push("/login");
+    // }
   };
 
   logout = () => {
@@ -32,7 +32,7 @@ class App extends Component {
 
   render() {
     const token = localStorage.getItem("jwtToken");
-    if (!token) return null;
+    // if (!token) return null
     return (
       <Router>
         <div className="app">
@@ -56,16 +56,23 @@ class App extends Component {
             <li>
               <Link to="/users">Users</Link>
             </li>
-      <li>
-          <Link to="/Volunteers">Volunteers</Link>
-        </li>
             <li>
-              {localStorage.getItem("jwtToken") && (
+              <Link to="/Volunteers">Volunteers</Link>
+            </li>
+
+            <li>
+              <Link to="/organisations-register">Register Organisation</Link>
+            </li>
+
+            <li>{!token && <Link to="/login">Login</Link>}</li>
+
+            {!!token && (
+              <li>
                 <button className="btn btn-primary" onClick={this.logout}>
                   Logout
                 </button>
-              )}
-            </li>
+              </li>
+            )}
           </ul>
           <hr />
 
@@ -75,12 +82,16 @@ class App extends Component {
           <Route path="/shelters" component={Shelters} />
           <Route path="/referrals" component={Referrals} />
           <Route path="/users" component={Users} />
-            <Route path="/Volunteers" component={VolunteersForm} />
-              
-      <Route path="/organisations_register" component={OrganisationsRegister} />
-              <Route path="/who-we-are" component={About} />
-      <Route path="/what-we-do" component={About} />
-      <Route path="/who-we-support" component={About} />
+          <Route path="/Volunteers" component={VolunteersForm} />
+          <Route path="/login" component={Login} />
+
+          <Route
+            path="/organisations-register"
+            component={OrganisationsRegister}
+          />
+          <Route path="/who-we-are" component={About} />
+          <Route path="/what-we-do" component={About} />
+          <Route path="/who-we-support" component={About} />
         </div>
       </Router>
     );

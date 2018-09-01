@@ -13,7 +13,7 @@ class OrganisationsRegister extends React.Component {
 
   onSubmit = e => {
     e.preventDefault();
-    api.saveOrganisation(this.state);
+    api.saveUser(this.state);
   };
   render() {
     return (

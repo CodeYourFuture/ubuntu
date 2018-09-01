@@ -42,15 +42,17 @@ router.get("/users", (req, res) => {
   });
 });
 
-router.post("/organisations", (req, res) => {
+router.post("/users", (req, res) => {
   const body = req.body;
-  const organisation = {
+  const user = {
     contact_name: body.contactName,
     organisation_name: body.organisationName,
     email: body.email,
-    address: body.address
+    address: body.address,
+    password: body.password
   };
-  db.saveOrganisation(organisation).then(data => {
+  console.log(".>>>>", user);
+  db.saveUser(user).then(data => {
     res.send(data);
   });
 });
