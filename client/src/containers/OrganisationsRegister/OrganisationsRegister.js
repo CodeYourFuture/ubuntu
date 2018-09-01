@@ -19,61 +19,60 @@ class OrganisationsRegister extends React.Component {
     return (
       <div className="register_form">
         <h1 className="heading">Register your organisation</h1>
-        <form className="organisation-details">
-          <label for="contactName">Name</label>
+        <form onSubmit={this.onSubmit} className="organisation-details">
+          <label htmlFor="contactName">Name</label>
           <input
             name="contactName"
             placeholder="Contact name"
             value={this.state.contactName}
             onChange={e => this.setState({ contactName: e.target.value })}
           />
-
           <br />
-          <label for="organisationName">Organisation name</label>
+          <label htmlFor="organisationName">Organisation name</label>
           <input
             name="organisationName"
             placeholder="Organisation name"
             value={this.state.organisationName}
             onChange={e => this.setState({ organisationName: e.target.value })}
           />
+          <br />
+          <label htmlFor="address">Address</label>
+          <input
+            name="address"
+            placeholder="Address"
+            value={this.state.address}
+            onChange={e => this.setState({ address: e.target.value })}
+          />
 
           <br />
-          <label address>
-            <input
-              placeholder="Address"
-              value={this.state.address}
-              onChange={e => this.setState({ address: e.target.value })}
-            />
-          </label>
+          <label htmlFor="email">Email</label>
+          <input
+            name="email"
+            placeholder="Email"
+            value={this.state.email}
+            onChange={e => this.setState({ email: e.target.value })}
+          />
+
           <br />
-          <label email>
-            <input
-              placeholder="Email"
-              value={this.state.email}
-              onChange={e => this.setState({ email: e.target.value })}
-            />
-          </label>
+          <label htmlFor="phone number">Phone number</label>
+          <input
+            name="phoneNumber"
+            placeholder="Phone number"
+            value={this.state.phoneNumber}
+            onChange={e => this.setState({ phoneNumber: e.target.value })}
+          />
+
           <br />
-          <label phone number>
+          <label htmlFor="password">
             <input
-              placeholder="Phone number"
-              value={this.state.phoneNumber}
-              onChange={e => this.setState({ phoneNumber: e.target.value })}
-            />
-          </label>
-          <br />
-          <label password>
-            <input
+              name="password"
               placeholder="Password"
               value={this.state.password}
               onChange={e => this.setState({ password: e.target.value })}
             />
           </label>
           <br />
-
-          <br />
-          <button onClick={e => this.onSubmit(e)}>Submit</button>
-          <button onFocus={e => this.onSubmit(e)}>Submit</button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     );
