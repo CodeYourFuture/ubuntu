@@ -3,8 +3,12 @@ exports.up = async (knex, Promise) => {
     table.increments("shelter_id");
     table.string("name");
     table.string("address");
-    table.string("details");
-    table.string("about");
+    table.string("who_we_are");
+    table.string("what_we_do");
+    table.string("who_do_we_support");
+    table.string("contact");
+    table.string("donations");
+    table.string("image");
   });
 
   await knex.schema.createTable("users", table => {
@@ -15,6 +19,7 @@ exports.up = async (knex, Promise) => {
     table.string("email").notNullable();
     table.string("password").notNullable();
     table.string("phone_number");
+    table.enum("role", ["admin", "organisation", "shelter"]);
   });
 
   await knex.schema.createTable("referrals", table => {

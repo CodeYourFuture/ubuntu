@@ -11,6 +11,7 @@ import OrganisationsRegister from "../OrganisationsRegister/OrganisationsRegiste
 import VolunteersForm from "../../components/VolunteersForm";
 import Login from "../../components/Login/Login";
 import axios from "axios";
+import ShelterHome from "../Shelters/ShelterHome";
 
 class App extends Component {
   state = {
@@ -36,55 +37,23 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
+          <Link to="/organisations-register">Register Organisation</Link> |{" "}
+          {!token && <Link to="/login">Login</Link>}
+          {!!token && (
+            <button className="btn btn-primary" onClick={this.logout}>
+              Logout
+            </button>
+          )}
           <Header />
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contactUs">Contact Us</Link>
-            </li>
-            <li>
-              <Link to="/shelters">Shelters</Link>
-            </li>
-            <li>
-              <Link to="/referrals">Referrals</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-            <li>
-              <Link to="/Volunteers">Volunteers</Link>
-            </li>
-
-            <li>
-              <Link to="/organisations-register">Register Organisation</Link>
-            </li>
-
-            <li>{!token && <Link to="/login">Login</Link>}</li>
-
-            {!!token && (
-              <li>
-                <button className="btn btn-primary" onClick={this.logout}>
-                  Logout
-                </button>
-              </li>
-            )}
-          </ul>
-          <hr />
-
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contactUs" component={ContactUs} />
-          <Route path="/shelters" component={Shelters} />
+          <Route exact path="/shelters" component={Shelters} />
+          <Route path="/shelters/:shelterId" component={ShelterHome} />
           <Route path="/referrals" component={Referrals} />
           <Route path="/users" component={Users} />
           <Route path="/Volunteers" component={VolunteersForm} />
           <Route path="/login" component={Login} />
-
           <Route
             path="/organisations-register"
             component={OrganisationsRegister}
