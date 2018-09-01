@@ -6,6 +6,7 @@ const cors = require("cors");
 const user = require("./routes/user");
 const auth = require("./routes/auth");
 const passport = require("passport");
+const path = require("path");
 const bodyParser = require("body-parser");
 require("./passport");
 
@@ -15,6 +16,15 @@ app.use(bodyParser());
 app.use("/api", api);
 app.use("/auth", auth);
 app.use("/user", passport.authenticate("jwt", { session: false }), user);
+
+// In development environemnt, we use the create-react-app dev server
+// In production, the static build is served from here
+if (process.env.NODE_ENV !== "development") {
+  app.use("/", express.static(path.resolve(__dirname, "../client/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
+  });
+}
 
 app.listen(SERVER_PORT, () =>
   console.log(`Ubuntu server running on http://localhost:${SERVER_PORT}`)

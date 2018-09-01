@@ -4,13 +4,22 @@
   "description": "Glasgow Graduation Project - Women Shelter system",
   "main": "index.js",
   "scripts": {
-    "start": "npm --prefix server start run dev & npm --prefix client start",
-    "install": "npm --prefix server install & npm --prefix client install"
+    "install": "npm --prefix server install & npm --prefix client install",
+    "client": "npm --prefix client start",
+    "server": "npm --prefix server start",
+    "dev": "NODE_ENV=development npm run client & npm --prefix server run dev",
+    "start": "npm run server",
+    "build": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build && cd ../",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/CodeYourFuture/ubuntu.git"
   },
+  "cacheDirectories": [
+    "server/node_modules",
+    "client/node_modules"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
