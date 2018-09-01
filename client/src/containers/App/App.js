@@ -75,6 +75,9 @@ class App extends Component {
           <Route path="/referrals" component={Referrals} />
           <Route path="/users" component={Users} />
             <Route path="/Volunteers" component={VolunteersForm} />
+              <Route path="/who-we-are" component={About} />
+      <Route path="/what-we-do" component={About} />
+      <Route path="/who-we-support" component={About} />
         </div>
       </Router>
     );

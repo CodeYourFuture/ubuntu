@@ -20,6 +20,10 @@ export const getUserProfile = () => {
   return instance.get("/user/profile");
 };
 
+export const getShelterAbout = () => {
+  return instance.get("/api/shelter/about").then(res => res.data);
+};
+
 export const loginUser = async (email, password) => {
   const { data } = await instance.post("/auth/login", { email, password });
 
@@ -28,3 +32,4 @@ export const loginUser = async (email, password) => {
 
   return data.token;
 };
+

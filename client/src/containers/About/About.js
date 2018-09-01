@@ -1,9 +1,18 @@
 import React from "react";
+import AboutInfo from '../About/AboutInfo';
 
-const About = () => (
+
+
+const About = (props) =>  {
+    
+    return (
+
   <div>
-    <h2>ABout the shelter</h2>
+        <div> 
+            <AboutInfo />
+        </div>
   </div>
-);
-
+        
+    )
+}
 export default About;
