@@ -1,4 +1,5 @@
 # ubuntu
+
 Glasgow Graduation Project - Women Shelter system
 
 ## Getting started
@@ -32,6 +33,8 @@ If you're working on a feature for _adding a student_, then name the branch `add
 6.  Repeat.
 
 # Database
+
+Start the DB: `sudo service postgresql start`
 
 Switch to the `postgres` system user: `sudo -i -u postgres`
 
