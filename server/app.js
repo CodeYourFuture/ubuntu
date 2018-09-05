@@ -17,9 +17,11 @@ app.use("/api", api);
 app.use("/auth", auth);
 app.use("/user", passport.authenticate("jwt", { session: false }), user);
 
+app.use("/static", express.static("public"));
+
 // In development environemnt, we use the create-react-app dev server
 // In production, the static build is served from here
-if (process.env.NODE_ENV !== "development") {
+if (process.env.NODE_ENV && process.env.NODE_ENV !== "development") {
   app.use("/", express.static(path.resolve(__dirname, "../client/build")));
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));

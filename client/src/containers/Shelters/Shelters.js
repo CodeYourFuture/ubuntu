@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as api from "../../helpers/api";
 import "./Shelters.css";
+import { Link } from "react-router-dom";
 
 class Shelters extends Component {
   state = {
@@ -20,10 +21,12 @@ class Shelters extends Component {
         <div class="shelters-container">
           {this.state.shelters.map(shelter => {
             return (
-              <div className="shelter-info">
-                <h3>{shelter.name}</h3>
-                <p>{shelter.city}</p>
-              </div>
+              <Link to={`/shelters/${shelter.shelter_id}`}>
+                <div className="shelter-info">
+                  <h3>{shelter.name}</h3>
+                  <p>{shelter.city}</p>
+                </div>
+              </Link>
             );
           })}
         </div>
