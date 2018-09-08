@@ -8,6 +8,10 @@ export const getShelters = () => {
   return instance.get("/api/shelters").then(res => res.data);
 };
 
+export const getSingleShelter = (shelterId) => {
+  return instance.get(`/api/shelters/${shelterId}`).then(res => res.data);
+};
+
 export const getReferrals = () => {
   return instance.get("/api/referrals").then(res => res.data);
 };

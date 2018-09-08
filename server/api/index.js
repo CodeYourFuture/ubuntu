@@ -9,6 +9,12 @@ router.get("/shelters", (req, res) => {
   });
 });
 
+router.get("/shelters/:shelterId", (req, res) => {
+  db.getSingleShelter(req.params.shelterId).then(data => {
+    res.send(data);
+  });
+});
+
 router.get("/referrals", (req, res) => {
   db.getReferrals().then(data => {
     res.send(data);
