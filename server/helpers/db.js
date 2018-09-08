@@ -6,6 +6,10 @@ const getShelters = () => {
   return knex.select().from("shelters");
 };
 
+const getSingleShelter = (shelter_id) => {
+  return knex.select().from("shelters").where({ shelter_id }).first();
+};
+
 const getOrganisations = () => {
   return knex.select().from("organisations");
 };
@@ -20,10 +24,6 @@ const getReferrals = () => {
 
 const saveUser = user => {
   return knex("users").insert(user);
-};
-
-const getShelterAbout = () => {
-  return knex.select().from("about");
 };
 
 const getUsers = () => {
@@ -53,5 +53,5 @@ module.exports = {
   getSingleUser,
   getUserProfile,
   saveUser,
-  getShelterAbout
+  getSingleShelter
 };

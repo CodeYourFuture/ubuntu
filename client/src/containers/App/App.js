@@ -44,7 +44,6 @@ class App extends Component {
               Logout
             </button>
           )}
-          <Header />
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contactUs" component={ContactUs} />
