@@ -42,7 +42,6 @@ class OrganisationsRegister extends React.Component {
         <label htmlFor="phoneNumber" className="grey-text">
           Phone number
         </label>
-        got
         <input type="number" id="number" className="form-control" />
         <br />
         <label htmlFor="password" className="grey-text">
