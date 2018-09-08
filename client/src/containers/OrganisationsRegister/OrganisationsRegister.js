@@ -22,7 +22,7 @@ class OrganisationsRegister extends React.Component {
         <label htmlFor="organisationName" className="grey-text">
           Organisation name
         </label>
-        <input type="text" id="organisationName" className="form-control" />
+        <input type="text" id="organisationName" className="form-control " />
         <br />
         <label htmlFor="Name" className="grey-text">
           Your name
