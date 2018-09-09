@@ -9,26 +9,48 @@ class Shelters extends Component {
   };
   componentDidMount() {
     api.getShelters().then(data => {
+      console.log('data',data);
+
       this.setState({
         shelters: data
+
       });
     });
   }
-  render() {
+  render() {console.log(this.state.shelters);
     return (
-      <div>
-        <h1>List of shelters</h1>
-        <div class="shelters-container">
-          {this.state.shelters.map(shelter => {
-            return (
-              <Link to={`/shelters/${shelter.shelter_id}`}>
-                <div className="shelter-info">
-                  <h3>{shelter.name}</h3>
-                  <p>{shelter.city}</p>
+      <div >
+        <div className="card  main-card">
+
+         <div className="shelters-title">SHELTERS IN GLASGOW FOR PEOPLE WITHOUT RECOURSE TO PUBLIC FUNDS</div>
+        
+            <div className="shelters-container">
+              <div className="card-deck">
+               {this.state.shelters.map(shelter => {
+                 return (
+                  <Link to={`/shelters/${shelter.shelter_id}`}>
+                   <div className="card">
+                    <div className="card-body">
+                     <div className="container">
+                      <div className="box">
+                      <div class="row">
+                      <div className="col-md">
+                      <h5 className="card-title">{shelter.name}</h5>
+                      <p  className="card-text">{shelter.address}</p>                
+                      </div>
+                      <div className="col-md shelterImg">{shelter.image}
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <small className="text-muted"></small>
                 </div>
               </Link>
             );
           })}
+          </div>
+        </div>
         </div>
       </div>
     );
