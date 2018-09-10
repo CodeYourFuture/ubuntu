@@ -8,10 +8,5 @@
 
 .form-group {
   margin: 0 auto;
-  width: 60%;
-}
-
-.form-group.required .control-label:after {
-  content: "*";
-  color: red;
+  width: 40%;
 }
