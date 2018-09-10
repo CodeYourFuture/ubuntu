@@ -12,3 +12,61 @@
   color: #213321;
   font-size: 16px;
 }
+h1{
+color: black;
+};
+
+
+.card{
+  width: 50rem;
+
+}
+
+@media (min-width: 576px) {
+  .card-deck .card {
+    width: 59.3rem;
+    high:100rem;
+    background-color:#eee;
+  }
+} 
+.shelters-title{
+  height: 9rem;
+  font-size: 20px;
+  text-shadow: 4px 4px 4px hsl(0, 0%, 48%);
+  background-color:  #55b6ee;
+  padding: 30px;
+}
+.shelterImg{
+  background-color: #55b6ee;
+  /* height: 10rem; */
+  /* width: 60rem */
+  ;
+}
+.card-body{
+  color:  #55b6ee;
+  background-color:
+   rgb(214, 240, 245);
+  padding:0px;
+  /* height:20rem; */
+  /* width:65rem; */
+  margin: 2px;
+
+}
+.shelters-container{
+  background-color:#eee;
+  padding: 10px;
+}
+.main-card{
+  margin:100px;
+}
+.card-title{
+  font-size:20px;
+  
+  /* margin: 20px; */
+  padding: 20px;
+}
+.card-text{
+  font-size: 17px;
+  /* margin:20px; */
+  padding:20px;
+}
