@@ -3,6 +3,7 @@ import ShelterHeader from "./ShelterHeader";
 import ShelterFooter from "./ShelterFooter";
 import * as api from '../../helpers/api'
 
+
 class Shelters extends Component {
   state = {
     shelter: {}
@@ -26,4 +27,9 @@ class Shelters extends Component {
     );
   }
 }
+
+
+
+
+
 export default Shelters;
