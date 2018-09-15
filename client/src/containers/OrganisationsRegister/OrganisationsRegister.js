@@ -12,6 +12,14 @@ class OrganisationsRegister extends React.Component {
     formValid: true
   };
 
+  // componentDidMount() {
+  //   api.getOrganisationsRegister().then(data => {
+  //     this.setState({
+  //       users: data
+  //     });
+  //   });
+  // }
+
   onSubmit = e => {
     e.preventDefault();
     console.log(this.state);

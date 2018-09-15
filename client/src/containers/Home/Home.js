@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../App/App.css";
-import SheltersList from "../Shelters/Shelters";
+import Shelters from "../Shelters/Shelters";
 
 class Home extends Component {
   render() {
@@ -9,7 +9,7 @@ class Home extends Component {
         <p className="app-intro">
           Shelters in Glasgow for People without recourse to public funds
         </p>
-        <SheltersList />
+        <Shelters />
       </div>
     );
   }
