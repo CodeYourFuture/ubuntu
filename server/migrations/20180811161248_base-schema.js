@@ -16,7 +16,10 @@ exports.up = async (knex, Promise) => {
     table.string("contact_name");
     table.string("organisation_name");
     table.string("address");
-    table.string("email").notNullable();
+    table
+      .string("email")
+      .notNullable()
+      .unique();
     table.string("password").notNullable();
     table.string("phone_number");
     table.enum("role", ["admin", "organisation", "shelter"]);
