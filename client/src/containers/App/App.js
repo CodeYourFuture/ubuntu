@@ -12,11 +12,13 @@ import VolunteersForm from "../../components/VolunteersForm";
 import Login from "../../components/Login/Login";
 import axios from "axios";
 import ShelterHome from "../Shelters/ShelterHome";
+//import Shelters from "../../components/Shelters";
 
 
 class App extends Component {
   state = {
     loggedIn: false
+  
   };
   componentDidMount = async () => {
     const token = localStorage.getItem("jwtToken");
@@ -39,11 +41,13 @@ class App extends Component {
       <Router>
         <div className="app">
           <Link to="/organisations-register">Register Organisation</Link> |{" "}
+          <Link to="/Shelters">Shelters</Link> 
           {!token && <Link to="/login">Login</Link>}
           {!!token && (
             <button className="btn btn-primary" onClick={this.logout}>
               Logout
             </button>
+            
           )}
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
@@ -53,14 +57,18 @@ class App extends Component {
           <Route path="/referrals" component={Referrals} />
           <Route path="/users" component={Users} />
           <Route path="/Volunteers" component={VolunteersForm} />
+         
           <Route path="/login" component={Login} />
           <Route
             path="/organisations-register"
             component={OrganisationsRegister}
           />
+          
+        
           <Route path="/who-we-are" component={About} />
           <Route path="/what-we-do" component={About} />
           <Route path="/who-we-support" component={About} />
+          <Route path="/Shelters" component={Shelters} />
         </div>
       </Router>
     );
