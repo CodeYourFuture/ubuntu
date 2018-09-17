@@ -5,14 +5,11 @@ class ShelterFooter extends React.Component {
   render() {
     return (
       <footer className="footer">
-        <div className="container text-center text-md-left">
+        <div className="page-footer text-center text-md-left">
           <div className="row">
             <div className="col-md-6 mt-md-0 mt-3">
-              <h5 className="title">Footer Content</h5>
-              <p>
-                Here you can use rows and columns here to organize your footer
-                content.
-              </p>
+              <h5 className="title">Ubuntu Women's Shelter</h5>
+              <p>footer content</p>
             </div>
             <div class="col-md-6 mb-4">
               <form class="input-group">
@@ -25,17 +22,21 @@ class ShelterFooter extends React.Component {
                 />
                 <div class="input-group-append">
                   <button class="btn btn-sm btn-outline-white" type="button">
-                    Sign up
+                    Subscribe
                   </button>
                 </div>
               </form>
+              <div
+                class="fb-login-button"
+                data-size="medium"
+                data-auto-logout-link="true"
+                data-onlogin=" checkLoginState();"
+              />
 
               <div className="col sm=6">
                 <h5 className="title">Links</h5>
+
                 <ul>
-                  <li className="list-unstyled">
-                    <a href="#!">Link 1</a>
-                  </li>
                   <li className="list-unstyled">
                     <a href="#!">Link 2</a>
                   </li>
@@ -53,7 +54,7 @@ class ShelterFooter extends React.Component {
         <div className="footer-copyright text-center py-3">
           <div className="container fluid">
             &copy; {new Date().getFullYear()} Copyright:{" "}
-            <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
+            <a href="https://www.codeyourfuture.com"> CodeYourFuture.com </a>
           </div>
         </div>
       </footer>
