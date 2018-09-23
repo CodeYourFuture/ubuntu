@@ -4,6 +4,7 @@ import Home from "../Home/Home";
 import About from "../About/About";
 import ContactUs from "../ContactUs/ContactUs";
 import Header from "../../components/Header/Header";
+import ShelterFooter from "../../components/Footer/ShelterFooter";
 
 import Referrals from "../Referrals/Referrals";
 import Users from "../Users/Users";
@@ -13,6 +14,7 @@ import Login from "../../components/Login/Login";
 import axios from "axios";
 import Shelters from "../Shelters/Shelters";
 import ShelterHome from "../Shelters/ShelterHome";
+
 //import Shelters from "../../components/Shelters";
 
 class App extends Component {
@@ -64,6 +66,7 @@ class App extends Component {
           <Route path="/what-we-do" component={About} />
           <Route path="/who-we-support" component={About} />
           <Route path="/Shelters" component={Shelters} />
+          <Route path="../ShelterFooter" component={ShelterFooter} />
         </div>
       </Router>
     );

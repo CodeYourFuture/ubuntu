@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ShelterHeader from "./ShelterHeader";
 import * as api from "../../helpers/api";
-import ShelterFooter from "./ShelterFooter";
+
 class Shelters extends Component {
   state = {
     shelter: {}
@@ -20,7 +20,6 @@ class Shelters extends Component {
       <div>
         <ShelterHeader shelter={this.state.shelter} />
         <h1>Shelter home</h1>
-        <ShelterFooter />
       </div>
     );
   }
