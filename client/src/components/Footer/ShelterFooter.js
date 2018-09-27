@@ -5,23 +5,26 @@ class ShelterFooter extends React.Component {
   render() {
     return (
       <footer className="footer">
-        <div className="page-footer text-center text-md-left">
+        <div className="page-footer ">
           <div className="row">
-            <div className="col-md-6 mt-md-0 mt-3">
-              <h5 className="title">Ubuntu Women's Shelter</h5>
-              <p>footer content</p>
+            <div className=" col-3 col-md-4">
+              <h5 className="title">Subscribe to our mailing list</h5>
             </div>
-            <div class="col-md-6 mb-4">
-              <form class="input-group">
+            <div className="col-3 col-md-4">
+              <form className="input-group form">
+                <label htmlFor="your_email" className="sr-only">
+                  Your name
+                </label>
                 <input
                   type="text"
-                  class="form-control form-control-sm"
+                  name="email"
+                  className="form-control"
                   placeholder="Your email"
-                  aria-label="Your email"
-                  aria-describedby="basic-addon2"
+                  id="email"
+                  required
                 />
                 <div class="input-group-append">
-                  <button class="btn btn-sm btn-outline-white" type="button">
+                  <button class="btn btn-sm" type="button">
                     Subscribe
                   </button>
                 </div>
@@ -32,22 +35,6 @@ class ShelterFooter extends React.Component {
                 data-auto-logout-link="true"
                 data-onlogin=" checkLoginState();"
               />
-
-              <div className="col sm=6">
-                <h5 className="title">Links</h5>
-
-                <ul>
-                  <li className="list-unstyled">
-                    <a href="#!">Link 2</a>
-                  </li>
-                  <li className="list-unstyled">
-                    <a href="#!">Link 3</a>
-                  </li>
-                  <li className="list-unstyled">
-                    <a href="#!">Link 4</a>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
