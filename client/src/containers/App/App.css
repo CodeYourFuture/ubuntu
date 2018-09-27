@@ -25,13 +25,13 @@ html, body {
   background-color: #C0B0D6;
 }
 
+.form {
+  border-color: #9582BB 10px;
+}
+
 .title {
   font-size: 24px;
   color: #9582bb;
-}
-
-.form {
-  border-color: #9582BB
 }
 
 .btn {
