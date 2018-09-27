@@ -10,38 +10,36 @@ class ShelterFooter extends React.Component {
             <div className=" col-3 col-md-4">
               <h5 className="title">Subscribe to our mailing list</h5>
             </div>
-            <div className="col-3 col-md-4">
-              <form className="input-group form">
-                <label htmlFor="your_email" className="sr-only">
-                  Your name
-                </label>
-                <input
-                  type="text"
-                  name="email"
-                  className="form-control"
-                  placeholder="Your email"
-                  id="email"
-                  required
-                />
+            <div className=" col-3 col-md-4">
+              <form className="input-group">
+                <div className="form">
+                  <label htmlFor="your_email" className="sr-only">
+                    Your email
+                  </label>
+                  <input
+                    type="text"
+                    name="email"
+                    className="form-control"
+                    placeholder="Your email"
+                    id="email"
+                    required
+                  />
+                </div>
                 <div class="input-group-append">
                   <button class="btn btn-sm" type="button">
                     Subscribe
                   </button>
                 </div>
               </form>
-              <div
-                class="fb-login-button"
-                data-size="medium"
-                data-auto-logout-link="true"
-                data-onlogin=" checkLoginState();"
-              />
+              <div className="fb-login-button" />
+              <div className="twitter-link" />
             </div>
           </div>
-        </div>
-        <div className="footer-copyright text-center py-3">
-          <div className="container fluid">
-            &copy; {new Date().getFullYear()} Copyright:{" "}
-            <a href="https://www.codeyourfuture.com"> CodeYourFuture.com </a>
+          <div className="footer-copyright text-center py-3">
+            <div className="container fluid">
+              &copy; {new Date().getFullYear()} Copyright:{" "}
+              <a href="https://www.codeyourfuture.com"> CodeYourFuture.com </a>
+            </div>
           </div>
         </div>
       </footer>
