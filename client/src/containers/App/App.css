@@ -6,16 +6,6 @@
   font-size: large;
 }
 
-/* .footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
-} */
-
 html, body {
   height: 100%;
 }
@@ -31,6 +21,19 @@ html, body {
   display: block;
 }
 
-.site-footer, .page-wrap:after {
-  height: 142px;
+.footer {
+  background-color: #C0B0D6;
+}
+
+.title {
+  font-size: 24px;
+  color: #9582bb;
+}
+
+.form {
+  border-color: #9582BB
+}
+
+.btn {
+  background-color: #9582BB;
 }
