@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/CodeYourFuture/ubuntu/issues"
   },
-  "homepage": "https://github.com/CodeYourFuture/ubuntu#readme"
+  "homepage": "https://github.com/CodeYourFuture/ubuntu#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.4"
+  }
 }
