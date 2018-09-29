@@ -42,7 +42,8 @@ class App extends Component {
       <Router>
         <div className="app">
           <Link to="/organisations-register">Register Organisation</Link> |{" "}
-          <Link to="/Shelters">Shelters</Link>
+          <Link to="/Shelters">Shelters</Link> |{" "}
+          <Link to="/contact">Contact</Link> |{" "}
           {!token && <Link to="/login">Login</Link>}
           {!!token && (
             <button className="btn btn-primary" onClick={this.logout}>
@@ -51,7 +52,7 @@ class App extends Component {
           )}
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/contactUs" component={ContactUs} />
+          <Route path="/contact" component={ContactUs} />
           <Route exact path="/shelters" component={Shelters} />
           <Route path="/shelters/:shelterId" component={ShelterHome} />
           <Route path="/referrals" component={Referrals} />

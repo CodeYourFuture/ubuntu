@@ -65,3 +65,21 @@ html, body {
   text-align: left;
   padding: 20px;
 }
+
+  #heroCarousel h1 {
+  color: white
+}
+
+#heroCarousel img {
+  opacity: 0.8
+}
+
+/* #heroCarousel .carousel-caption {
+  /* background: white */
+}  */
+
+
+.logo-image {
+  width: 70%;
+  height: auto;
+}
