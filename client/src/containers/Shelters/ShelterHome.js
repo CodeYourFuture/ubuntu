@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ShelterHeader from "./ShelterHeader";
-import ShelterFooter from "./ShelterFooter";
+import ShelterFooter from "../../components/Footer/ShelterFooter";
 import * as api from '../../helpers/api'
 import { withRouter } from 'react-router-dom'
 import HeroImage from '../../components/HeroImage'
