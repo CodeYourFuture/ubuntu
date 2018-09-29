@@ -27,7 +27,6 @@ class Shelters extends Component {
     return (
       <div>
         <ShelterHeader shelter={this.state.shelter} />
-        <h1>Shelter home</h1>
         <HeroImage shelterId={shelterId} />
         <ShelterFooter />
       </div>
