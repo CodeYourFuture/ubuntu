@@ -63,7 +63,6 @@ class App extends Component {
           <Route path="/who-we-are" component={About} />
           <Route path="/what-we-do" component={About} />
           <Route path="/who-we-support" component={About} />
-          <Route path="/Shelters" component={Shelters} />
         </div>
       </Router>
     );

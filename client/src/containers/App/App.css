@@ -5,3 +5,20 @@
 .app-intro {
   font-size: large;
 }
+
+#heroCarousel h1 {
+  color: white
+}
+
+#heroCarousel img {
+  opacity: 0.8
+}
+
+#heroCarousel .carousel-caption {
+  /* background: white */
+}
+
+.logo-image {
+  width: 70%;
+  height: auto;
+}
