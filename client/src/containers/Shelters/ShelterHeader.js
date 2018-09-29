@@ -4,12 +4,12 @@ const ShelterHeader = props => {
   const shelter = props.shelter;
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          Navbar
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <a className="navbar-brand" href="#">
+          <img className="logo-image" src={`/static/shelters/${shelter.shelter_id}/logo.png`} />
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -17,39 +17,39 @@ const ShelterHeader = props => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon" />
+          <span className="navbar-toggler-icon" />
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
-                Home <span class="sr-only">(current)</span>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item active">
+              <a className="nav-link" href="#/">
+                Home <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a className="nav-link" href="#/who-we-are">
                 Who we are
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a className="nav-link" href="#/what-we-do">
                 What we do
               </a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a className="nav-link"  href="#/who-do-we-support">
                 Who do we support
               </a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a className="nav-link"  href="#/contact">
                 Contact
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">
+            <li className="nav-item">
+              <a className="nav-link disabled"  href="#/donations">
                 Donations
               </a>
             </li>
