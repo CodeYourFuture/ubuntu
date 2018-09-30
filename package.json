@@ -8,6 +8,7 @@
     "client": "npm --prefix client start",
     "server": "npm --prefix server start",
     "dev": "NODE_ENV=development npm run client & npm --prefix server run dev",
+    "win-dev": "npm run client & npm --prefix server run dev",
     "start": "npm run server",
     "build": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build && cd ../",
     "heroku-postbuild": "npm run build"
@@ -25,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/CodeYourFuture/ubuntu/issues"
   },
-  "homepage": "https://github.com/CodeYourFuture/ubuntu#readme"
+  "homepage": "https://github.com/CodeYourFuture/ubuntu#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.4"
+  }
 }

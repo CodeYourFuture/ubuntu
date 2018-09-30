@@ -8,7 +8,7 @@ export const getShelters = () => {
   return instance.get("/api/shelters").then(res => res.data);
 };
 
-export const getSingleShelter = (shelterId) => {
+export const getSingleShelter = shelterId => {
   return instance.get(`/api/shelters/${shelterId}`).then(res => res.data);
 };
 
@@ -38,6 +38,10 @@ export const saveUser = userData => {
 
 export const getShelterAbout = () => {
   return instance.get("/api/shelter/about").then(res => res.data);
+};
+
+export const getShelterFooter = () => {
+  return instance.get("/api/shelterFooter").then(res => res.data);
 };
 
 export const loginUser = async (email, password) => {

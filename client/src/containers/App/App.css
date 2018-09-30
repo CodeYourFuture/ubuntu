@@ -1,7 +1,103 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 .app {
   text-align: center;
 }
 
 .app-intro {
   font-size: large;
+}
+
+html, body {
+  height: 100%;
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.footer {
+  background-color: #C0B0D6;
+  padding: 10px
+}
+
+.footer .email {
+  border: 5px solid #9582BB
+}
+
+.exit-action {
+  color: red;
+  border: 0;
+  font-weight: bold;
+  background: none;
+}
+
+.title {
+  font-size: 24px;
+  color: #41348B;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  padding: 20px;
+}
+
+.btn {
+  background-color: #9582BB;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+.footer-info {
+  color: #41348B;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  padding: 20px;
+}
+
+  #heroCarousel h1 {
+  color: white
+}
+
+#heroCarousel img {
+  opacity: 0.8
+}
+
+/* #heroCarousel .carousel-caption {
+  background: white 
+}  */
+
+
+.logo-image {
+  width: 70%;
+  height: auto;
+}
+
+.shelters-dropdown {
+  display: inline-block;
+}
+
+.header-wrapper {
+  position: relative
+}
+
+.header-extra-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  margin: 10px;
+  text-align: center;
+  font-size: 12px;
 }

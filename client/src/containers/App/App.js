@@ -4,21 +4,21 @@ import Home from "../Home/Home";
 import About from "../About/About";
 import ContactUs from "../ContactUs/ContactUs";
 import Header from "../../components/Header/Header";
-import Shelters from "../Shelters/Shelters";
+import ShelterFooter from "../../components/Footer/ShelterFooter";
+
 import Referrals from "../Referrals/Referrals";
 import Users from "../Users/Users";
 import OrganisationsRegister from "../OrganisationsRegister/OrganisationsRegister";
 import VolunteersForm from "../../components/VolunteersForm";
 import Login from "../../components/Login/Login";
 import axios from "axios";
+import Shelters from "../Shelters/Shelters";
 import ShelterHome from "../Shelters/ShelterHome";
-//import Shelters from "../../components/Shelters";
 
 
 class App extends Component {
   state = {
     loggedIn: false
-  
   };
   componentDidMount = async () => {
     const token = localStorage.getItem("jwtToken");
@@ -40,35 +40,24 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
-          <Link to="/organisations-register">Register Organisation</Link> |{" "}
-          <Link to="/Shelters">Shelters</Link> 
-          {!token && <Link to="/login">Login</Link>}
-          {!!token && (
-            <button className="btn btn-primary" onClick={this.logout}>
-              Logout
-            </button>
-            
-          )}
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={ShelterHome} />
           <Route path="/about" component={About} />
-          <Route path="/contactUs" component={ContactUs} />
           <Route exact path="/shelters/:shelterId" component={ShelterHome} />
+          <Route path="/contact" component={ContactUs} />
           <Route exact path="/shelters" component={Shelters} />
           <Route path="/referrals" component={Referrals} />
           <Route path="/users" component={Users} />
           <Route path="/Volunteers" component={VolunteersForm} />
-         
           <Route path="/login" component={Login} />
           <Route
             path="/organisations-register"
             component={OrganisationsRegister}
           />
-          
-        
           <Route path="/who-we-are" component={About} />
           <Route path="/what-we-do" component={About} />
           <Route path="/who-we-support" component={About} />
           <Route path="/Shelters" component={Shelters} />
+          <Route path="../ShelterFooter" component={ShelterFooter} />
         </div>
       </Router>
     );
