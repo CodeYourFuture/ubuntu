@@ -12,8 +12,7 @@ const ShelterHeader = props => {
     localStorage.removeItem("jwtToken");
     window.location.reload();
   };
-  console.log('shelter img', shelter);
-  
+
   return (
     <div className="header-wrapper">
       <div className="header-extra-info">

@@ -7,7 +7,8 @@ width: 5em;
 
 }
 .navbar{
-    background-color: #C0B0D6
+    background: #c2b7d9 !important;
+    height: 10em;
 }
 
 .navbar-nav li.active > a {
