@@ -52,8 +52,8 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contactUs" component={ContactUs} />
+          <Route exact path="/shelters/:shelterId" component={ShelterHome} />
           <Route exact path="/shelters" component={Shelters} />
-          <Route path="/shelters/:shelterId" component={ShelterHome} />
           <Route path="/referrals" component={Referrals} />
           <Route path="/users" component={Users} />
           <Route path="/Volunteers" component={VolunteersForm} />

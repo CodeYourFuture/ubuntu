@@ -13,7 +13,7 @@ exports.seed = async (knex, Promise) => {
         what_we_do: "we do stuff....",
         who_do_we_support: "women asylum seekers",
         contact: "contact ubuntu",
-        donations: "donate to ubuntu"
+
       },
       {
         name: "Edinburgh Men Shelter",
