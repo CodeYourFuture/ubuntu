@@ -83,3 +83,21 @@ html, body {
   width: 70%;
   height: auto;
 }
+
+.shelters-dropdown {
+  display: inline-block;
+}
+
+.header-wrapper {
+  position: relative
+}
+
+.header-extra-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  margin: 10px;
+  text-align: center;
+  font-size: 12px;
+}

@@ -1,9 +1,30 @@
 import React from "react";
+import { Link } from 'react-router-dom'
+import SheltersDropDownList from "../../components/SheltersDropDownList";
 
 const ShelterHeader = props => {
   const shelter = props.shelter;
+  const token = localStorage.getItem("jwtToken");
+
+  const logout = () => {
+    localStorage.removeItem("jwtToken");
+    window.location.reload();
+  };
+
   return (
-    <div>
+    <div className="header-wrapper">
+      <div className="header-extra-info">
+              <Link to="/organisations-register">Register Organisation</Link>
+              {' '} | {' '}
+              {!token && <Link to="/login">Login</Link>}
+              {' '} | {' '}
+              <SheltersDropDownList />
+              {!!token && (
+                <button className="btn btn-primary" onClick={logout}>
+                  Logout
+                </button>
+              )}
+            </div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="#">
           <img className="logo-image" src={`/static/shelters/${shelter.shelter_id}/logo.png`} />
@@ -21,37 +42,26 @@ const ShelterHeader = props => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item active">
-              <a className="nav-link" href="#/">
-                Home <span className="sr-only">(current)</span>
-              </a>
+          <li className="nav-item">
+              <Link className="nav-link" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#/who-we-are">
-                Who we are
-              </a>
+              <Link className="nav-link" to={`/shelters/${shelter.shelter_id}/who-we-are`}>Who we are</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#/what-we-do">
-                What we do
-              </a>
+              <Link className="nav-link" to={`/shelters/${shelter.shelter_id}/what-we-do`}>What we do</Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link"  href="#/who-do-we-support">
-                Who do we support
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link"  href="#/contact">
-                Contact
-              </a>
+              <Link className="nav-link" to={`/shelters/${shelter.shelter_id}/who-do-we-support`}>Who do we support</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link disabled"  href="#/donations">
+              <a className="nav-link disabled"  href={`/shelters/${shelter.shelter_id}/donations`}>
                 Donations
               </a>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
