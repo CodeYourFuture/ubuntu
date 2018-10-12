@@ -20,6 +20,7 @@ const CoverTracks = props => {
             The steps are different depending on which browser you are using.
             Click on the links below to follow the steps for your browser.
           </p>
+          {/* link to site with instructions for different browsers */}
         </h3>
       </div>
     </div>
