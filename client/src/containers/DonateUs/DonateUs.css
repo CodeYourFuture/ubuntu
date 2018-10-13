@@ -1,0 +1,14 @@
+body {
+  margin-top: 20px;
+}
+.panel-title {
+  display: inline;
+  font-weight: bold;
+}
+.pl-ziro {
+  padding-left: 0px;
+}
+.container {
+  margin: 0 auto;
+  width: 40%;
+}

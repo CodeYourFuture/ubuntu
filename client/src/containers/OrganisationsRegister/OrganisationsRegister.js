@@ -14,19 +14,26 @@ class OrganisationsRegister extends React.Component {
 
   onSubmit = e => {
     e.preventDefault();
+    this.setState({
+      formSubmitted: true
+    });
     console.log(this.state);
-    if (this.state.contactName.length === 0) {
+    if (this.state.contactName.length === 0 || this.state.email.length === 0) {
       // invalid
-      this.setState({
-        formValid: false
-      });
+      this.setState({ formValid: false });
     } else {
+      document.getElementById("organisation-form").reset();
       //valid
       this.setState({ formValid: true });
+      alert("You been registered successfully");
       api.saveUser(this.state).then(() => {
         this.props.history.push("/login");
       });
     }
+  };
+
+  onClick = e => {
+    this.onSubmit(e);
   };
 
   onChange = e => {
@@ -40,11 +47,21 @@ class OrganisationsRegister extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-6 offset-md-3">
-            <form onSubmit={this.onSubmit}>
+            <form id="organisation-form" onSubmit={this.onSubmit}>
               <p className="h4 text-center mb-4">
                 Please provide all the information requested. Your registration
                 cannot be completed without it.
               </p>
+              {this.state.formValid && this.state.formSubmitted ? (
+                <div class="alert alert-success" role="alert">
+                  <strong>Valid Form!</strong>
+                </div>
+              ) : null}
+              {!this.state.formValid && this.state.formSubmitted ? (
+                <div class="alert alert-danger" role="alert">
+                  <strong>Invalid Form</strong>
+                </div>
+              ) : null}
               <div className="form-group">
                 <label htmlFor="contactName" className="sr-only">
                   Your name
@@ -56,7 +73,6 @@ class OrganisationsRegister extends React.Component {
                   id="contactName"
                   placeholder="Your name"
                   className="form-control"
-                  required
                 />
               </div>
               <div className="form-group">
@@ -68,7 +84,6 @@ class OrganisationsRegister extends React.Component {
                   onChange={this.onChange}
                   placeholder="Organisation name"
                   className="form-control"
-                  required
                 />
                 <div class="invalid-feedback">
                   Please provide your organisation name
@@ -85,7 +100,6 @@ class OrganisationsRegister extends React.Component {
                   onChange={this.onChange}
                   placeholder="Address"
                   className="form-control"
-                  required
                 />
               </div>
               <div className="form-group">
@@ -127,11 +141,7 @@ class OrganisationsRegister extends React.Component {
                   className="form-control"
                 />
               </div>
-              {!this.state.formValid ? (
-                <div class="alert alert-danger" role="alert">
-                  Form is not valid
-                </div>
-              ) : null}
+
               <div className="text-center mt-4">
                 <button className="btn btn-large btn-primary" type="submit">
                   Register

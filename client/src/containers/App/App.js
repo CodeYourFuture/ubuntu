@@ -14,6 +14,7 @@ import Login from "../../components/Login/Login";
 import axios from "axios";
 import Shelters from "../Shelters/Shelters";
 import ShelterHome from "../Shelters/ShelterHome";
+import DonateUs from "../DonateUs/DonateUs";
 import CoverYourTracks from "../../components/CoverYourTracks";
 
 class App extends Component {
@@ -44,11 +45,13 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/contact" component={ContactUs} />
           <Route exact path="/shelters" component={Shelters} />
+          
           <Route path="/shelters/:shelterId" component={ShelterHome} />
           <Route path="/referrals" component={Referrals} />
           <Route path="/users" component={Users} />
           <Route path="/Volunteers" component={VolunteersForm} />
           <Route path="/login" component={Login} />
+          <Route path="/donate" component={DonateUs}/>
           <Route
             path="/organisations-register"
             component={OrganisationsRegister}
