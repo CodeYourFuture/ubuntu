@@ -4,7 +4,6 @@ import ShelterFooter from "../../components/Footer/ShelterFooter";
 import * as api from '../../helpers/api'
 import { withRouter } from 'react-router-dom'
 import HeroImage from '../../components/HeroImage'
-import Home from "../Home/Home";
 
 
 class Shelters extends Component {
@@ -31,7 +30,6 @@ class Shelters extends Component {
       <div>
         <ShelterHeader shelter={this.state.shelter} />
         <HeroImage shelterId={shelterId} />
-        <Home />
       </div>
     );
   }

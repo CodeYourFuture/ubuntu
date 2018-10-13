@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Home from "../Home/Home";
 import About from "../About/About";
 import ContactUs from "../ContactUs/ContactUs";
 import Header from "../../components/Header/Header";
@@ -12,7 +11,6 @@ import OrganisationsRegister from "../OrganisationsRegister/OrganisationsRegiste
 import VolunteersForm from "../../components/VolunteersForm";
 import Login from "../../components/Login/Login";
 import axios from "axios";
-import Shelters from "../Shelters/Shelters";
 import ShelterHome from "../Shelters/ShelterHome";
 import CoverYourTracks from "../../components/CoverYourTracks";
 
@@ -39,14 +37,13 @@ class App extends Component {
     const token = localStorage.getItem("jwtToken");
     // if (!token) return null
     console.log('appppp', this.props);
-    
+
     return (
       <Router>
         <div className="app">
           <Route exact path="/" component={ShelterHome} />
           <Route exact path="/shelters/:shelterId" component={ShelterHome} />
           <Route path="/contact" component={ContactUs} />
-          <Route exact path="/shelters" component={Shelters} />
           <Route path="/referrals" component={Referrals} />
           <Route path="/users" component={Users} />
           <Route path="/Volunteers" component={VolunteersForm} />
