@@ -18,7 +18,6 @@ class Shelters extends Component {
     });
   }
   render() {
-    console.log(this.state.shelters);
     return (
       <div>
         <div className="card  main-card">
