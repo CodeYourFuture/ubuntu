@@ -12,10 +12,10 @@ class Shelters extends Component {
   };
   componentDidMount() {
     const { shelterId } = this.props.match.params
-    // if(!shelterId) {
-    //   this.props.history.push('/shelters/1')
-    //   return
-    // }
+    if (!shelterId) {
+      this.props.history.push('/shelters/1')
+      return
+    }
     api.getSingleShelter(shelterId).then(data => {
       this.setState({
         shelter: data
