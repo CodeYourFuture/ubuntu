@@ -13,6 +13,7 @@ import Login from "../../components/Login/Login";
 import axios from "axios";
 import ShelterHome from "../Shelters/ShelterHome";
 import CoverYourTracks from "../../components/CoverYourTracks";
+import "./App.css";
 
 
 class App extends Component {
