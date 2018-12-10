@@ -33,6 +33,7 @@ class ContactUs extends React.Component {
   onClick = e => {
     this.onSubmit(e);
   };
+
   onChange = e => {
     const state = this.state;
     state[e.target.name] = e.target.value;
@@ -67,9 +68,10 @@ class ContactUs extends React.Component {
           <div className="row">
             <div className="col-md-12 mb-md-0 mb-5">
               <form
-                onSubmit={this.onSubmit}
+                action="https://formspree.io/topimorita@gmail.com"
                 id="contact-form"
                 name="contact-form"
+                method="POST"
               >
                 <div className="row">
                   <div className="col-md-6">
@@ -133,17 +135,13 @@ class ContactUs extends React.Component {
                     </div>
                   </div>
                 </div>
-              </form>
-
-              <div className="text-center text-md-left">
-                <button
+                <input
                   className="btn btn-large btn-primary"
-                  onClick={this.onClick}
                   type="submit"
-                >
-                  Send
-                </button>
-              </div>
+                  value="Send"
+                  onClick="onClick"
+                />
+              </form>
               <div className="status" />
             </div>
           </div>

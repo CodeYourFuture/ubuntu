@@ -10,12 +10,14 @@ class Shelters extends Component {
   state = {
     shelter: {}
   };
+
   componentDidMount() {
     const { shelterId } = this.props.match.params
     if (!shelterId) {
       this.props.history.push('/shelters/1')
       return
     }
+
     api.getSingleShelter(shelterId).then(data => {
       this.setState({
         shelter: data
@@ -25,7 +27,6 @@ class Shelters extends Component {
 
   render() {
     const { shelterId } = this.props.match.params
-    const path = this.props.match.path
     return (
       <div>
         <ShelterHeader shelter={this.state.shelter} />
