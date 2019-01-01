@@ -1,17 +1,13 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import About from "../About/About";
+import Who from "../Content/Who";
+import What from "../Content/What";
+import Support from "../Content/Support";
+import Donations from "../Content/Donations";
 import ContactUs from "../ContactUs/ContactUs";
-import Header from "../../components/Header/Header";
 import ShelterFooter from "../../components/Footer/ShelterFooter";
-
-import Referrals from "../Referrals/Referrals";
-import Users from "../Users/Users";
-import OrganisationsRegister from "../OrganisationsRegister/OrganisationsRegister";
-import VolunteersForm from "../../components/VolunteersForm";
-import Login from "../../components/Login/Login";
 import axios from "axios";
-import ShelterHome from "../Shelters/ShelterHome";
+import ShelterHome from "../ShelterHome";
 import CoverYourTracks from "../../components/CoverYourTracks";
 import "./App.css";
 
@@ -43,22 +39,22 @@ class App extends Component {
       <Router>
         <div className="app">
           <Route exact path="/" component={ShelterHome} />
-          <Route exact path="/shelters/:shelterId" component={ShelterHome} />
+          <Route exact path="/:shelterId" component={ShelterHome} />
           <Route path="/contact" component={ContactUs} />
-          <Route path="/referrals" component={Referrals} />
+       {/*    <Route path="/referrals" component={Referrals} />
           <Route path="/users" component={Users} />
           <Route path="/Volunteers" component={VolunteersForm} />
           <Route path="/login" component={Login} />
           <Route
             path="/organisations-register"
             component={OrganisationsRegister}
-          />
-          <Route path="/about" component={About} />
-          <Route path="/who-we-are" component={About} />
-          <Route path="/what-we-do" component={About} />
-          <Route path="/who-we-support" component={About} />
-          <Route path="../ShelterFooter" component={ShelterFooter} />
-          <Route path="../CoverYourTracks" component={CoverYourTracks} />
+          /> */}
+          <Route path="/who-we-are" component={Who} />
+          <Route path="/what-we-do" component={What} />
+          <Route path="/who-we-support" component={Support} />
+          <Route path="/donations" component={Donations} />
+          <Route path="/ShelterFooter" component={ShelterFooter} />
+          <Route path="/CoverYourTracks" component={CoverYourTracks} />
         </div>
       </Router>
     );

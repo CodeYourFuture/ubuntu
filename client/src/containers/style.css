@@ -1,0 +1,47 @@
+
+
+.navbar{
+    background: #c2b7d9 !important;
+}
+.navbar-nav {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column !important;
+}
+
+.navbar-brand {
+    padding: 1.5rem;
+}
+
+.nav-item{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.navbar-nav li.active > a {
+        color: #615F66;
+}
+
+.nav-link > a{
+    font-weight: medium;
+    font-size: 24px;
+    color:  #41348b
+}
+
+.emergency {
+    display: flex !important;
+    justify-content: flex-end;
+    padding-bottom: 2.5rem;
+    font-size: 18px;
+}
+
+.nav-link.cover, .nav-link.leave {
+    color: red !important ;
+}
+
+.menu{
+    display: flex;
+}
+
+
+

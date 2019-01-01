@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import ShelterHeader from "./ShelterHeader";
-import ShelterFooter from "../../components/Footer/ShelterFooter";
-import * as api from '../../helpers/api'
+import ShelterFooter from "../components/Footer/ShelterFooter";
+import * as api from '../helpers/api'
 import { withRouter } from 'react-router-dom'
-import HeroImage from '../../components/HeroImage'
+import HeroImage from '../components/HeroImage'
 
 
 class Shelters extends Component {
@@ -14,7 +14,7 @@ class Shelters extends Component {
   componentDidMount() {
     const { shelterId } = this.props.match.params
     if (!shelterId) {
-      this.props.history.push('/shelters/1')
+      this.props.history.push('/')
       return
     }
 
@@ -30,7 +30,7 @@ class Shelters extends Component {
     return (
       <div>
         <ShelterHeader shelter={this.state.shelter} />
-        <HeroImage shelterId={shelterId} />
+        <HeroImage />
         <ShelterFooter />
       </div>
     );
