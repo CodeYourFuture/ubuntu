@@ -11,7 +11,6 @@ import ShelterHome from "../ShelterHome";
 import CoverYourTracks from "../../components/CoverYourTracks";
 import "./App.css";
 
-
 class App extends Component {
   state = {
     loggedIn: false
